@@ -12,10 +12,10 @@
 }
 body {
     background: #000;
+    
 }
 
-
-    
+   
 header {  
             background: linear-gradient(180deg, rgba(0, 0, 0, 0.8000) 0.000%, rgba(0, 0, 0, 0.7889) 8.333%, rgba(0, 0, 0, 0.7556) 16.67%, rgba(0, 0, 0, 0.7000) 25.00%, rgba(0, 0, 0, 0.6222) 33.33%, rgba(0, 0, 0, 0.5222) 41.67%, rgba(0, 0, 0, 0.4000) 50.00%, rgba(0, 0, 0, 0.2778) 58.33%, rgba(0, 0, 0, 0.1778) 66.67%, rgba(0, 0, 0, 0.1000) 75.00%, rgba(0, 0, 0, 0.04444) 83.33%, rgba(0, 0, 0, 0.01111) 91.67%, rgba(0, 0, 0, 0.000) 100.0%);
             margin: 0px auto; 
@@ -23,7 +23,7 @@ header {
             position: absolute;
             background-color: transparent;
             .container {
-                
+                position: relative;
                 max-width: 1200px;
                 display: flex;
                 align-items: center;
@@ -52,7 +52,11 @@ header {
                         font-weight: 500;
                         font-size: 1em;
                         border-radius: 5px;  
-                        cursor: pointer;   
+                        cursor: pointer;  
+                        
+                        #option {
+                            display: none;
+                        }
         
                         
                        
@@ -87,18 +91,19 @@ header {
         
         }
 }
-    
+
+
+
 
 main {
-    
-    
     margin: 0px auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 80vh;
+    height: 75vh;
     width: 100%;
     background: radial-gradient(11% 56% at 17% 50%, #461518 0%, transparent 100%), radial-gradient(11% 56% at 83% 50%, #461518 0%, transparent 100%);
+
     section {
         width: 100%;
         height: 100%;
@@ -112,6 +117,18 @@ main {
         background-size: cover;
         background-repeat: no-repeat;
 
+
+        .bodyMain {
+    position: absolute;
+    top:0;
+    right: 0;
+    bottom: 321px;
+    left: 0;
+    z-index: -1;
+    margin-top: -0.6rem;
+    border-radius: inherit;
+    background: linear-gradient(to right, rgba(33, 13, 22, 0.059) 16%, rgba(184, 40, 105, 1), rgba(229, 9, 20, 1), rgba(184, 40, 105, 1), rgba(33, 13, 22, 0.137) 80%);
+}
         .firstContainer  {
         width: 100%;
         background-image: linear-gradient(7deg, rgba(0, 0, 0, 0.8500) 10.00%, rgba(0, 0, 0, 0.8465) 17.25%, rgba(0, 0, 0, 0.8361) 24.50%, rgba(0, 0, 0, 0.8187) 31.75%, rgba(0, 0, 0, 0.7944) 39.00%, rgba(0, 0, 0, 0.7632) 46.25%, rgba(0, 0, 0, 0.7250) 53.50%, rgba(0, 0, 0, 0.6868) 60.75%, rgba(0, 0, 0, 0.6556) 68.00%, rgba(0, 0, 0, 0.6312) 75.25%, rgba(0, 0, 0, 0.6139) 82.50%, rgba(0, 0, 0, 0.6035) 89.75%, rgba(0, 0, 0, 0.6000) 97.00%);
@@ -121,7 +138,6 @@ main {
         }
         
         .container {
-        
             width: 100%;
             max-width: 1200px;
             height: 100%;
@@ -162,6 +178,8 @@ main {
                 gap: 10px;
                 margin-top: 15px;
                 position: relative;
+                
+
                 #input{
                     color: whitesmoke;
                     font-size: 20px;
@@ -174,10 +192,12 @@ main {
                 }
 
                 button {
+                    display: flex;
+                    align-items:center ;
                     border-radius: 2px;
                     color: whitesmoke;
                     border:none;
-                    padding: 12.5px 70px;
+                    padding: 12.5px 20px;
                     background-color: red;
                     font-size: 20px;
                     font-weight: 600;
@@ -190,9 +210,7 @@ main {
                     background-color: rgb(201, 8, 8);
                 }
                 svg {
-                    position: absolute;
-                    right: 3%;
-                    width: 25px;
+                    margin-left: 11px;
                     cursor: pointer;
                     path {
                     fill: white;
@@ -202,6 +220,7 @@ main {
     }
 }
 }
+
 
 #firstSection {
     flex-direction: column;
@@ -213,7 +232,56 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    position:relative;
+   
+    h3 {
+        align-self: self-start;
+        left: 0;
+        color: whitesmoke;
+         font-size: 34px;
+         font-weight: 600;
+         font-family: "Poppins",sans-serif;
+    }
+   
+    .arrowDiv {
+        position: relative;
+        width: 100%;
+        padding: 0px 30px;
+.rightSvg {
+        position: absolute;
+        right: 0;
+        background-color: rgba(255, 255, 255, 0.256);
+        height: 70px;
+        top:37%;
+        z-index: 1;
+        transition: 0.2s all ease;
+        path {
+        fill: white;
+        }
+}
+
+.leftSvg {
+    max-width: 100%;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.256);
+    height: 70px;
+    left: 0;
+    top:37%;
+    z-index: 1;
+    transition: 0.2s all ease;
+    path {
+    fill: white;
+    }
+}
+.leftSvg:hover,.rightSvg:hover {
+    background-color: rgba(255, 255, 255, 0.306);
+}
+.leftSvg:active,.rightSvg:active {
+    background-color: rgba(255, 255, 255, 0.447);
+}
+
+
+    }
     
 
     
@@ -225,56 +293,57 @@ main {
     justify-content: center;
     gap: 15px;
     flex-direction: column;
-    overflow-x: auto;
-    
+    overflow-x:auto;
+    overflow: hidden;
 
-    .arrow {
-        position: relative;
-        width: 100%;
-        .rightSvg {
-        background-color: #000000e9;
-        position: absolute;
-        height: 100px;
-        right:0;
-        top:30%;
-        z-index: 1;
-        path {
-        fill: white;
-        }
-}
-.leftSvg {
-    background-color: #000000e9;
-    left:0;
-    top:30%;
-    position: absolute;
-    z-index: 1;
-    height: 100px;
-    path {
-    fill: white;
-    }
-}
-    }
+     
+
+    
+    
 
     .carouselWrapper {
         width: 100%;
-
         
     }
 
-    h3 {
-        color: whitesmoke;
-         font-size: 34px;
-         font-weight: 600;
-         font-family: "Poppins",sans-serif;
-    }
+    
     .slideShow {
         flex-wrap: nowrap;
         display: flex;
         justify-content: start;
         align-items: center;
-        gap: 50px;
         border-radius: 20px;
         position: relative;
+       
+
+        .fotot {
+            padding: 15px 29px;
+            width: 100%;
+            position: relative;
+            transition: all 0.2s ease-in-out;
+
+            .one,.two,.three,.four,.five,.six,.seven,.eight,.nine {
+                line-height: 1;
+                left: 10px;
+                bottom: 25px;
+                position: absolute;
+                display: inline-block;
+                font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+                height: 1em;
+                -webkit-text-stroke: 0;
+                cursor: pointer;
+                font-weight: 900;
+                -webkit-text-fill-color: rgba(0, 0, 0, 0.667);
+                font-size: 6.25rem;
+                color: rgb(16, 16, 16);
+                -webkit-text-stroke: 0.15rem rgba(255, 255, 255, 0.811);
+                text-shadow: 0 0 1.5rem rgb(0, 0, 0);
+            }
+        }
+        .fotot:hover {
+            transform: scale(1.1) ;
+        }
+
         img {
              border-radius: 15px;
         }
@@ -315,16 +384,32 @@ main {
             height: 300px;
             display: flex;
             flex-direction: column;
-            align-items: end;
+            align-items: start;
             justify-content: space-between;
-            padding: 10px;
+            padding: 20px;
             background: linear-gradient(
                 149deg,
                 #192247 0%,
                 #210e17 96.86%
             );
             border-radius: 10px;
-
+            .arrow {
+                display: flex;
+                align-self: end;
+            }
+            .computer {
+                display: flex;
+                align-self: end;
+            }
+            .cheer {
+                display: flex;
+                align-self: end;
+            }
+            .faces {
+                display: flex;
+                align-self: end;
+            }
+            
             .Text {
                 display: flex;
                 flex-direction: column;
@@ -469,15 +554,16 @@ main {
                 width: 510px;
                 height: 55px;
                 border-radius: 5px;
+                margin-right: 8px;
                 background-color: rgba(0, 0, 0, 0.333);
                 border: 1.2px solid gray;
             }
 
             button {
-                border-radius: 2px;
+                border-radius: 5px;
                 color: whitesmoke;
                 border:none;
-                padding: 12.5px 70px;
+                padding: 11px 20px;
                 background-color: red;
                 font-size: 20px;
                 font-weight: 600;
@@ -491,7 +577,7 @@ main {
 
             svg {
                 position: relative;
-                right: 7%;
+                right: -5%;
                 top: 5px;
                 width: 25px;
                 cursor: pointer;
@@ -575,12 +661,11 @@ main {
 
 
 
-
-
 @media screen and  (max-width:1024px) {
     header {
             max-width: 100%;
             .container {
+                padding: 16px 10px 10px 10px;
                 justify-content: space-between;
                 padding: 0px 60px;
 
@@ -592,10 +677,25 @@ main {
                 }
             }
     }
+
+    
     main {
-        height: 49vh;
+        height: 58vh;
         section {
             width: 100%;
+
+            .bodyMain {
+    position: absolute;
+    top:0px;
+    right: 0;
+    bottom: 569px;
+    left: 0;
+    z-index: -1;
+    margin-top: -0.6rem;
+    border-radius: inherit;
+    background: linear-gradient(to right, rgba(33, 13, 22, 0.059) 16%, rgba(184, 40, 105, 1), rgba(229, 9, 20, 1), rgba(184, 40, 105, 1), rgba(33, 13, 22, 0.137) 80%);
+}
+
 
             .container {
 
@@ -617,21 +717,29 @@ main {
                 .content {
                     position: relative;
                     button {
-                        padding-right: 50px;
-                        padding-left: 50px;
-                    }
-                    svg {
-                        right: 3%;
+                        padding-right: 20px;
+                        padding-left: 20px;
                     }
                 }
                 
             }
         }
+
+ 
     }
 
     #firstSection {
     width: 100%;
     padding: 0px 60px;
+
+
+  h3 {
+        color: whitesmoke;
+         font-size: 23px;
+         font-weight: 600;
+         font-family: "Poppins",sans-serif;
+    }
+
     .container {
     width: 100%;
     display: flex;
@@ -675,12 +783,7 @@ main {
         
     }
 
-    h3 {
-        color: whitesmoke;
-         font-size: 23px;
-         font-weight: 600;
-         font-family: "Poppins",sans-serif;
-    }
+  
     .slideShow {
         flex-wrap: nowrap;
         display: flex;
@@ -710,10 +813,10 @@ main {
                 }
             }
             .secondContent {
-                grid-template-columns: repeat(2,1fr);
+                grid-template-columns: 1fr;
                 
                 .Container {
-                    height: 200px;
+                    height: auto;
 
                     
                 }
@@ -753,6 +856,7 @@ main {
                     border-radius: 5px;
                     background-color: rgba(0, 0, 0, 0.333);
                     border: 1.2px solid gray;
+                    margin-bottom: 20px;
                 }
     
                 button {
@@ -766,19 +870,17 @@ main {
                     font-family: "Poppins",sans-serif;
                     transition: 0.3s all ease-in-out;
                     cursor: pointer;
+                    
                 }
                 button:hover {
                     background-color: rgb(201, 8, 8);
                 }
     
                 svg {
-                    position: relative;
-                    right: 5%;
-                    top: 5px;
                     width: 25px;
-                    cursor: pointer;
+                    margin-left: 20px;
                     path {
-                    fill: white;
+                    fill: rgba(255, 255, 255, 0.836);
                     }
             }
     
@@ -797,24 +899,76 @@ main {
 
 
 
-@media screen and (max-width:767px) {
+@media screen and (max-width:767px) { 
 
     header {
+        width: 100%;
             .container {
+                width: 100%;
+                position: relative;
+                width: 100%;
                 margin: 0px auto;
+                padding: 16px 10px 10px 10px;
                 justify-content: space-between;
-                padding: 0px 60px;
+                align-items: center;
+
+                
+                .logo {
+                    img{
+                        max-width: 125px;
+                    }
+                }
 
                 .permabjtje {
+                    max-width: 100%;
                     position: relative;
+
+                    #dropdown {
+                        position: relative;
+                        padding:4.2px 0px;
+                        background-color: rgba(0, 0, 0, 0.379);
+                        color:whitesmoke;
+                        font-family: "Poppins",sans-serif;
+                        font-weight: 500;
+                        font-size: 0.8em;
+                        border-radius: 3px;  
+                        cursor: pointer;
+                        
+        
+                        
+                       
+                        option {
+                            background-color: rgba(0, 0, 0, 0.379);
+                            cursor: pointer;
+                            color: white;
+                        }
+                    }
+        
+                    button {
+                        padding:5px 20px;
+                        color: whitesmoke;
+                        font-family: "Poppins",sans-serif;
+                        font-weight: 500;
+                        font-size: 0.8em;
+                        background-color: red;
+                        border-radius: 3px;
+                        border: none;
+                        transition: all 0.3s ease-in-out;
+                        cursor: pointer;
+                    }
+                    
                     svg {
-                        right: 87%;
+                        display: none;
+                        right: 74%;
                     }
                 }
             }
+                    
     }
+
+
     main {
-        height: 59vh;
+        height: 60vh;
         width: 100%;
         section {
             width: 100%;
@@ -833,17 +987,21 @@ main {
                 }
 
                 #input {
-                    max-width: 200px;
+                    width:100%;
+                    max-width: 90%;
+                    padding: 0px 10px;
+                    max-height: 43px;
                 }
                 
                 .content {
+                    width: 100%;
+                    flex-direction: column;
                     position: relative;
                     button {
-                        padding-right: 40px;
+                        padding-right: 10px;
+                        padding-top: 7px;
+                        padding-bottom: 7px;
                         padding-left: 10px;
-                    }
-                    svg {
-                        right: 3%;
                     }
                 }
                 
@@ -853,7 +1011,294 @@ main {
 
     #firstSection {
     width: 100%;
-    padding: 0px 60px;
+    padding: 0px 30px;
+
+        h3 {
+        color: whitesmoke;
+         font-size: 23px;
+         font-weight: 600;
+         font-family: "Poppins",sans-serif;
+    }
+
+    .container {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 15px;
+    flex-direction: column;
+    overflow-x: auto;
+     
+
+    .arrow {
+        position: relative;
+        width: 100%;
+        .rightSvg {
+        background-color: #000000e9;
+        position: absolute;
+        height: 40px;
+        right:0;
+        top:30%;
+        z-index: 1;
+        path {
+        fill: white;
+        }
+}
+.leftSvg {
+    background-color: #000000e9;
+    left:0;
+    top:30%;
+    position: absolute;
+    z-index: 1;
+    height: 40px;
+    path {
+    fill: white;
+    }
+}
+    }
+
+    .carouselWrapper {
+        width: 100%;
+
+        
+    }
+
+   
+    .slideShow {
+        flex-wrap: nowrap;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 10px;
+        border-radius: 20px;
+        position: relative;
+        img {
+            max-width: 120px;
+             border-radius: 10px;
+        }
+    }
+
+    
+    }
+       
+
+        .secondContainer {
+            width: 100%;
+            hgroup {
+                h3 {
+                    color: whitesmoke;
+                    font-family: "Poppins",sans-serif;
+                    font-size: 23px;
+                    text-align: start;
+                    font-weight: 600;
+                }
+            }
+            .secondContent {
+                grid-template-columns: repeat(1,1fr);
+                
+                .Container {
+                    height: auto;
+
+                    
+                }
+            }
+            
+        }
+
+        .thirdContainer {
+            .header {
+                padding: 25px;
+            }
+            hgroup {
+                h3 {
+                     font-size: 23px;
+                }
+            }
+            h3,p {
+            font-size: 1.1rem;
+        }
+        }
+
+        .fourthContainer {
+
+            .content {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 15px;
+                margin-top: 70px;
+    
+                p {
+                    color:whitesmoke;
+                    font-weight: 500;
+                    font-family: "poppins";
+                }
+                #input{
+                    color: whitesmoke;
+                    font-size: 20px;
+                    padding: 6px;
+                    width: 100%;
+                    height: 50px;
+                    border-radius: 5px;
+                    background-color: rgba(0, 0, 0, 0.333);
+                    border: 1.2px solid gray;
+                    margin-bottom: 20px;
+                }
+    
+                button {
+                    border-radius: 2px;
+                    color: whitesmoke;
+                    border:none;
+                    padding: 10.5px 10px;
+                    background-color: red;
+                    font-size: 20px;
+                    font-weight: 600;
+                    font-family: "Poppins",sans-serif;
+                    transition: 0.3s all ease-in-out;
+                    cursor: pointer;
+                }
+                button:hover {
+                    background-color: rgb(201, 8, 8);
+                }
+    
+                svg {
+                    width: 25px;
+                    margin-left: 20px;
+                    path {
+                    fill: rgba(255, 255, 255, 0.836);
+                    }
+            }
+    
+            }
+    
+        }
+        footer {
+            .divS {
+                gap: 40px;
+                flex-direction: column;
+            }
+        }
+
+
+    }
+}
+
+
+@media screen and (max-width:375px) { 
+
+    header {
+        width: 100%;
+            .container {
+                width: 100%;
+                position: relative;
+                width: 100%;
+                margin: 0px auto;
+                padding: 16px 10px 10px 10px;
+                justify-content: space-between;
+                align-items: center;
+
+                
+                .logo {
+                    img{
+                        max-width: 125px;
+                    }
+                }
+
+                .permabjtje {
+                    max-width: 100%;
+                    position: relative;
+
+                    #dropdown {
+                        position: relative;
+                        padding:4.2px 0px;
+                        background-color: rgba(0, 0, 0, 0.379);
+                        color:whitesmoke;
+                        font-family: "Poppins",sans-serif;
+                        font-weight: 500;
+                        font-size: 0.8em;
+                        border-radius: 3px;  
+                        cursor: pointer;
+                        
+        
+                        
+                       
+                        option {
+                            background-color: rgba(0, 0, 0, 0.379);
+                            cursor: pointer;
+                            color: white;
+                        }
+                    }
+        
+                    button {
+                        padding:5px 20px;
+                        color: whitesmoke;
+                        font-family: "Poppins",sans-serif;
+                        font-weight: 500;
+                        font-size: 0.8em;
+                        background-color: red;
+                        border-radius: 3px;
+                        border: none;
+                        transition: all 0.3s ease-in-out;
+                        cursor: pointer;
+                    }
+                    
+                    svg {
+                        display: none;
+                        right: 74%;
+                    }
+                }
+            }
+                    
+    }
+
+
+    main {
+        height: 80vh;
+        width: 100%;
+        section {
+            width: 100%;
+
+            .container {
+                
+                .text {
+                    gap: 15px;
+                    max-width:90%;
+                    h3 {
+                        font-size:30px;
+                    }
+                    p {
+                        font-size: 16px;
+                    }
+                }
+
+                #input {
+                    width:100%;
+                    max-width: 90%;
+                    padding: 0px 10px;
+                    max-height: 43px;
+                }
+                
+                .content {
+                    width: 100%;
+                    flex-direction: column;
+                    position: relative;
+                    button {
+                        padding-right: 10px;
+                        padding-top: 7px;
+                        padding-bottom: 7px;
+                        padding-left: 10px;
+                    }
+                }
+                
+            }
+        }
+        
+    }
+
+    #firstSection {
+    width: 100%;
+    padding: 0px 30px;
     .container {
     width: 100%;
     display: flex;
@@ -870,7 +1315,7 @@ main {
         .rightSvg {
         background-color: #000000e9;
         position: absolute;
-        height: 100px;
+        height: 40px;
         right:0;
         top:30%;
         z-index: 1;
@@ -884,7 +1329,7 @@ main {
     top:30%;
     position: absolute;
     z-index: 1;
-    height: 100px;
+    height: 40px;
     path {
     fill: white;
     }
@@ -908,11 +1353,12 @@ main {
         display: flex;
         justify-content: start;
         align-items: center;
-        gap: 50px;
+        gap: 10px;
         border-radius: 20px;
         position: relative;
         img {
-             border-radius: 15px;
+            max-width: 120px;
+             border-radius: 10px;
         }
     }
 
@@ -932,10 +1378,10 @@ main {
                 }
             }
             .secondContent {
-                grid-template-columns: repeat(2,1fr);
+                grid-template-columns: repeat(1,1fr);
                 
                 .Container {
-                    height: 200px;
+                    height: auto;
 
                     
                 }
@@ -944,11 +1390,17 @@ main {
         }
 
         .thirdContainer {
+            .header {
+                padding: 25px;
+            }
             hgroup {
                 h3 {
                      font-size: 23px;
                 }
             }
+            h3,p {
+            font-size: 1.1rem;
+        }
         }
 
         .fourthContainer {
@@ -969,19 +1421,20 @@ main {
                 #input{
                     color: whitesmoke;
                     font-size: 20px;
-                    padding: 10px;
-                    width: 460px;
-                    height: 55px;
+                    padding: 6px;
+                    width: 100%;
+                    height: 50px;
                     border-radius: 5px;
                     background-color: rgba(0, 0, 0, 0.333);
                     border: 1.2px solid gray;
+                    margin-bottom: 20px;
                 }
     
                 button {
                     border-radius: 2px;
                     color: whitesmoke;
                     border:none;
-                    padding: 12.5px 30px;
+                    padding: 10.5px 10px;
                     background-color: red;
                     font-size: 20px;
                     font-weight: 600;
@@ -994,13 +1447,10 @@ main {
                 }
     
                 svg {
-                    position: relative;
-                    right: 5%;
-                    top: 5px;
                     width: 25px;
-                    cursor: pointer;
+                    margin-left: 20px;
                     path {
-                    fill: white;
+                    fill: rgba(255, 255, 255, 0.836);
                     }
             }
     
@@ -1008,6 +1458,10 @@ main {
     
         }
         footer {
+            .divS {
+                gap: 40px;
+                flex-direction: column;
+            }
         }
 
 
