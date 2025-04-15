@@ -14,8 +14,6 @@ body {
     background: #000;
     
 }
-
-   
 header {  
             background: linear-gradient(180deg, rgba(0, 0, 0, 0.8000) 0.000%, rgba(0, 0, 0, 0.7889) 8.333%, rgba(0, 0, 0, 0.7556) 16.67%, rgba(0, 0, 0, 0.7000) 25.00%, rgba(0, 0, 0, 0.6222) 33.33%, rgba(0, 0, 0, 0.5222) 41.67%, rgba(0, 0, 0, 0.4000) 50.00%, rgba(0, 0, 0, 0.2778) 58.33%, rgba(0, 0, 0, 0.1778) 66.67%, rgba(0, 0, 0, 0.1000) 75.00%, rgba(0, 0, 0, 0.04444) 83.33%, rgba(0, 0, 0, 0.01111) 91.67%, rgba(0, 0, 0, 0.000) 100.0%);
             margin: 0px auto; 
@@ -235,16 +233,14 @@ main {
     align-items: center;
     justify-content: center;
     position:relative;
-   
     h3 {
         align-self: self-start;
         left: 0;
         color: whitesmoke;
-         font-size: 34px;
-         font-weight: 600;
-         font-family: "Poppins",sans-serif;
+        font-size: 34px;
+        font-weight: 600;
+        font-family: "Poppins",sans-serif;
     }
-   
     .arrowDiv {
         position: relative;
         width: 100%;
@@ -449,20 +445,20 @@ main {
         }
     }
 
-
+    
     .thirdContainer {
         width: 100%;
         margin-top: 70px;
-        display: grid;
-        grid-template-rows: repeat(1,1fr);
+        display: flex;
+        flex-direction: column;
         gap: 20px;
 
         hgroup {
             h3 {
                 color: whitesmoke;
-                 font-size: 34px;
-                 font-weight: 600;
-                 font-family: "Poppins",sans-serif;
+                font-size: 34px;
+                font-weight: 600;
+                font-family: "Poppins",sans-serif;
             }
         }
         h3,p{
@@ -475,8 +471,7 @@ main {
             font-size: 1.6rem;
         }
         
-        
-
+        }
         
         .firstAsk {
             width: 100%;
@@ -485,13 +480,10 @@ main {
             align-items: start;
             justify-content: center;
             gap: 1.5px;
-            
         }
-
-        .header.active .theXbutton {
-            
-                    transform: rotate(45deg);
-            }
+        .headerOne.active .theXbutton {
+            transform: rotate(45deg);
+        }
         .secondAsk {
             width: 100%;
             flex-direction: column;
@@ -500,6 +492,10 @@ main {
             justify-content: center;
             gap: 1.5px;
         }
+        .headerTwo.active .theXbutton {
+            transform: rotate(45deg);
+        }
+
         .thirdAsk {
             width: 100%;
             flex-direction: column;
@@ -507,6 +503,9 @@ main {
             align-items: start;
             justify-content: center;
             gap: 1.5px;
+        }
+        .headerThree.active .theXbutton {
+            transform: rotate(45deg);
         }
         .fourthAsk {
             width: 100%;
@@ -516,6 +515,9 @@ main {
             justify-content: center;
             gap: 1.5px;
         }
+        .headerFour.active .theXbutton {
+            transform: rotate(45deg);
+        }
         .fifthAsk {
             width: 100%;
             flex-direction: column;
@@ -523,6 +525,9 @@ main {
             align-items: start;
             justify-content: center;
             gap: 1.5px;
+        }
+        .headerFive.active .theXbutton {
+            transform: rotate(45deg);
         }
         .sixthAsk {
             width: 100%;
@@ -532,157 +537,231 @@ main {
             justify-content: center;
             gap: 1.5px;
         }
-
+        .headerSix.active .theXbutton {
+            transform: rotate(45deg);
+        }
+        
         .firstDiv {
             width: 100%;
-            padding: 25px;
             background-color: rgba(128, 128, 128, 0.361);
+            height: 100%;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+        .firstDiv.active{
+            max-height: 500px;
+            padding: 10px;
+        }
+        .secDiv {
             width: 100%;
-            display: none;
+            background-color: rgba(128, 128, 128, 0.361);
+            height: 100%;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+        .secDiv.active{
+            max-height: 500px;
+            padding: 10px;
+        }
+        .thrDiv {
+            width: 100%;
+            background-color: rgba(128, 128, 128, 0.361);
+            height: 100%;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+        .thrDiv.active{
+            max-height: 500px;
+            padding: 10px;
+        }
+        .frDiv {
+            width: 100%;
+            background-color: rgba(128, 128, 128, 0.361);
+            height: 100%;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+        .frDiv.active{
+            max-height: 500px;
+            padding: 10px;
+        }
+        .fvDiv {
+            width: 100%;
+            background-color: rgba(128, 128, 128, 0.361);
+            height: 100%;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+        .fvDiv.active{
+            max-height: 500px;
+            padding: 10px;
+        }
+        .sxDiv {
+            width: 100%;
+            background-color: rgba(128, 128, 128, 0.361);
+            height: 100%;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+        .sxDiv.active{
+            max-height: 500px;
+            padding: 10px;
         }
 
-        .header {
+        .headerOne,.headerTwo,.headerThree,.headerFour,.headerFive,.headerSix{
             padding: 25px ;
             background-color: rgba(128, 128, 128, 0.361);
             display: flex;
             align-items: center;
             justify-content: space-between;
             width: 100%;
+            cursor: pointer;
+            
+            .theXbutton {
+                transition: all 0.3s cubic-bezier(0.930, 0.000, 0.200, 0.285);
+            }
             
             }
-
-            
-        }
-    }
-
-
-
-
-    .fourthContainer {
-
-        .content {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 15px;
-            margin-top: 70px;
-
-            p {
-                color:whitesmoke;
-                font-weight: 500;
-                font-family: "poppins";
-            }
-            #input{
-                color: whitesmoke;
-                font-size: 20px;
-                padding: 10px;
-                width: 510px;
-                height: 55px;
-                border-radius: 5px;
-                margin-right: 8px;
-                background-color: rgba(0, 0, 0, 0.333);
-                border: 1.2px solid gray;
+            .headerOne:hover,.headerTwo:hover,.headerThree:hover,.headerFour:hover,.headerFive:hover,.headerSix:hover {
+                background-color: rgba(128, 128, 128, 0.514);
             }
 
-            button {
-                border-radius: 5px;
-                color: whitesmoke;
-                border:none;
-                padding: 11px 20px;
-                background-color: red;
-                font-size: 20px;
-                font-weight: 600;
-                font-family: "Poppins",sans-serif;
-                transition: 0.3s all ease-in-out;
-                cursor: pointer;
-            }
-            button:hover {
-                background-color: rgb(201, 8, 8);
-            }
 
-            svg {
-                position: relative;
-                right: -5%;
-                top: 5px;
-                width: 25px;
-                cursor: pointer;
-                path {
-                fill: white;
+            .fourthContainer {
+
+                .content {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 15px;
+                    margin-top: 70px;
+        
+                    p {
+                        color:whitesmoke;
+                        font-weight: 500;
+                        font-family: "poppins";
+                    }
+                    #input{
+                        color: whitesmoke;
+                        font-size: 20px;
+                        padding: 10px;
+                        width: 510px;
+                        height: 55px;
+                        border-radius: 5px;
+                        margin-right: 8px;
+                        background-color: rgba(0, 0, 0, 0.333);
+                        border: 1.2px solid gray;
+                    }
+        
+                    button {
+                        border-radius: 5px;
+                        color: whitesmoke;
+                        border:none;
+                        padding: 11px 20px;
+                        background-color: red;
+                        font-size: 20px;
+                        font-weight: 600;
+                        font-family: "Poppins",sans-serif;
+                        transition: 0.3s all ease-in-out;
+                        cursor: pointer;
+                    }
+                    button:hover {
+                        background-color: rgb(201, 8, 8);
+                    }
+        
+                    svg {
+                        position: relative;
+                        right: -5%;
+                        top: 5px;
+                        width: 25px;
+                        cursor: pointer;
+                        path {
+                        fill: white;
+                        }
                 }
-        }
-
-        }
-
-    }
-
-    footer {
-        margin-bottom: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: start;
-        width: 100%;
-        margin-top: 70px;
-        .fifthContainer {
-            width: 100%;
-            display: flex;
-            align-items: start;
-            flex-direction: column;
-            gap: 40px;
-            a{
-                font-size: 0.9em;
-                font-family: "poppins";
-                color: rgba(255, 255, 255, 0.861);
+        
+                }
+        
             }
-
-            .divS {
-                width: 100%;
+        
+            footer {
+                margin-bottom: 50px;
                 display: flex;
                 justify-content: center;
-                justify-content: space-between;
-            }
-
-            .footerDivs {
-                display: flex;
-                flex-direction: column;
-                gap: 5px;
+                align-items: start;
+                width: 100%;
+                margin-top: 70px;
+                .fifthContainer {
+                    width: 100%;
+                    display: flex;
+                    align-items: start;
+                    flex-direction: column;
+                    gap: 40px;
                     a{
                         font-size: 0.9em;
                         font-family: "poppins";
                         color: rgba(255, 255, 255, 0.861);
                     }
-            }
-
-            #dropdown {
-                padding: 3px 29px;
-                background-color: rgba(0, 0, 0, 0.379);
-                color: whitesmoke;
-                font-family: "Poppins",sans-serif;
-                font-weight: 500;
-                font-size: 1em;
-                border-radius: 5px;  
-                cursor: pointer;   
-
-                
-               
-                option {
-                    background-color: rgba(0, 0, 0, 0.379);
-                    cursor: pointer;
-                    color: black;
+        
+                    .divS {
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        justify-content: space-between;
+                    }
+        
+                    .footerDivs {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px;
+                            a{
+                                font-size: 0.9em;
+                                font-family: "poppins";
+                                color: rgba(255, 255, 255, 0.861);
+                            }
+                    }
+        
+                    #dropdown {
+                        padding: 3px 29px;
+                        background-color: rgba(0, 0, 0, 0.379);
+                        color: whitesmoke;
+                        font-family: "Poppins",sans-serif;
+                        font-weight: 500;
+                        font-size: 1em;
+                        border-radius: 5px;  
+                        cursor: pointer;   
+        
+                        option {
+                            background-color: rgba(0, 0, 0, 0.379);
+                            cursor: pointer;
+                            color: black;
+                        }
+                    }
+        
+                    .netflixKosova {
+                        p {
+                            font-size: 0.9em;
+                                font-family: "poppins";
+                                color: rgba(255, 255, 255, 0.861);
+                        }
+                    }
                 }
-            }
-
-            .netflixKosova {
-                p {
-                    font-size: 0.9em;
-                        font-family: "poppins";
-                        color: rgba(255, 255, 255, 0.861);
-                }
+        
+            
             }
         }
 
+
+
+
     
-    }
 
 
 @media screen and (max-width: 1500px) {
@@ -770,7 +849,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 75vh;
+    height: 100vh;
     width: 100%;
     background: radial-gradient(11% 56% at 17% 50%, #461518 0%, transparent 100%), radial-gradient(11% 56% at 83% 50%, #461518 0%, transparent 100%);
 
@@ -825,7 +904,7 @@ main {
                     text-align: center;
                     color: whitesmoke;
                     font-family: "Poppins",sans-serif;
-                    font-size:60px;
+                    font-size:30px;
                     font-weight: bolder;
                 }
 
@@ -837,7 +916,7 @@ main {
                     font-family: "Poppins",sans-serif;
                 }
                 .cta {
-                    font-size: 1em;
+                    font-size: 0.8em;
                     font-weight: 400;
                 }
             }
@@ -854,8 +933,8 @@ main {
                     color: whitesmoke;
                     font-size: 20px;
                     padding: 10px;
-                    width: 510px;
-                    height: 55px;
+                    width: 410px;
+                    height: 45px;
                     border-radius: 5px;
                     background-color: rgba(0, 0, 0, 0.333);
                     border: 1.2px solid gray;
@@ -867,7 +946,7 @@ main {
                     border-radius: 2px;
                     color: whitesmoke;
                     border:none;
-                    padding: 12.5px 20px;
+                    padding: 6.5px 20px;
                     background-color: red;
                     font-size: 20px;
                     font-weight: 600;
@@ -1102,7 +1181,7 @@ main {
         margin-top: 70px;
         display: grid;
         grid-template-rows: repeat(1,1fr);
-        gap: 60px;
+        gap: 20px;
 
         hgroup {
             h3 {
@@ -1169,7 +1248,7 @@ main {
         }
 
         .firstDiv {
-            padding: 25px;
+            /* padding: 25px; */
             background-color: rgba(128, 128, 128, 0.361);
             width: 100%;
         }
@@ -1451,6 +1530,7 @@ main {
         }
 
         .thirdContainer {
+            gap: 15px ;
             hgroup {
                 h3 {
                      font-size: 23px;
@@ -1733,12 +1813,13 @@ main {
         }
 
         .thirdContainer {
+            gap: 10px;
             .header {
                 padding: 25px;
             }
             hgroup {
                 h3 {
-                     font-size: 23px;
+                font-size: 23px;
                 }
             }
             h3,p {

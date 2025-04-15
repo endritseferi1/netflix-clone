@@ -45,11 +45,42 @@ carouselWrapper.addEventListener("scroll", updateArrowVisibility);
 
 
 
-const hamburger  = document.querySelector(".header");
-const theXbutton = document.getElementById(".theXbutton");
+const hamburgerOne  = document.querySelector(".headerOne");
+const hamburgerTwo  = document.querySelector(".headerTwo");
+const hamburgerThree  = document.querySelector(".headerThree");
+const hamburgerFour  = document.querySelector(".headerFour");
+const hamburgerFive  = document.querySelector(".headerFive");
+const hamburgerSix  = document.querySelector(".headerSix");
+const theXbutton = document.querySelector(".theXbutton");
+const firstDiv = document.querySelector(".firstDiv")
+const secDiv = document.querySelector(".secDiv")
+const thrDiv = document.querySelector(".thrDiv")
+const frDiv = document.querySelector(".frDiv")
+const fvDiv = document.querySelector(".fvDiv")
+const sxDiv = document.querySelector(".sxDiv")
 
 
-
-  hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
+  hamburgerOne.addEventListener("click", () => {
+    hamburgerOne.classList.toggle("active");
+    firstDiv.classList.toggle("active");
+  });
+  hamburgerTwo.addEventListener("click", () => {
+    hamburgerTwo.classList.toggle("active");
+    secDiv.classList.toggle("active");
+  });
+  hamburgerThree.addEventListener("click", () => {
+    hamburgerThree.classList.toggle("active");
+    thrDiv.classList.toggle("active");
+  });
+  hamburgerFour.addEventListener("click", () => {
+    hamburgerFour.classList.toggle("active");
+    frDiv.classList.toggle("active");
+  });
+  hamburgerFive.addEventListener("click", () => {
+    hamburgerFive.classList.toggle("active");
+    fvDiv.classList.toggle("active");
+  });
+  hamburgerSix.addEventListener("click", () => {
+    hamburgerSix.classList.toggle("active");
+    sxDiv.classList.toggle("active");
   });
